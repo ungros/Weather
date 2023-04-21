@@ -17,7 +17,7 @@ class DayCollectionView: UICollectionView, UICollectionViewDelegate, UICollectio
         
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 20
-        backgroundColor = .green
+        backgroundColor = .clear
         showsHorizontalScrollIndicator = false
        
         delegate = self

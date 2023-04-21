@@ -15,8 +15,8 @@ class DayViewCell: UICollectionViewCell {
     let stackView: UIStackView! = {
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.layer.cornerRadius = 7
-        stack.backgroundColor = .red //UIColor(named: "Card")
+        stack.layer.cornerRadius = 12
+        stack.backgroundColor = UIColor(named: "Card")
         return stack
     }()
     

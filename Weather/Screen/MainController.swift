@@ -13,6 +13,20 @@ class MainController: UIViewController, ConstraintRelatableTarget {
     private var dayCollectionView = DayCollectionView()
     private var weekCollectionView = WeeklyCollectionView()
     
+    private let attentionView: RootView = {
+        let view = RootView()
+        view.backgroundColor = UIColor(named: "Attention")
+        view.layer.cornerRadius = 12
+        return view
+    }()
+    
+    private let mainCardView: RootView = {
+        let view = RootView()
+        view.backgroundColor = .blue
+        view.layer.cornerRadius = 12
+        return view
+    }()
+    
 //    private let pinImage: UIImage = {
 //        let image = UIImage(named: "mappin.and.ellipse")
 //        image?.withTintColor(UIColor(named: "Symbol")!)
@@ -82,6 +96,19 @@ extension MainController {
             make.bottom.equalToSuperview().inset(16)
         }
         
+        view.addSubview(mainCardView)
+        mainCardView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.top.equalToSuperview().inset(116)
+            make.height.equalTo(193)
+        }
+        
+        view.addSubview(attentionView)
+        attentionView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.top.equalToSuperview().inset(544)
+            make.height.equalTo(86)
+        }
             
             
         }

@@ -17,7 +17,7 @@ class WeeklyCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
         
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 0
-        backgroundColor = .green
+        backgroundColor = .clear
         showsVerticalScrollIndicator = false
        
         delegate = self

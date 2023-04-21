@@ -15,7 +15,7 @@ class HourViewCell: UICollectionViewCell {
     let stackView: UIStackView! = {
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.layer.cornerRadius = 7
+        stack.layer.cornerRadius = 4
         stack.backgroundColor = UIColor(named: "Card")
         return stack
     }()
