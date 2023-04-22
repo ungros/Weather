@@ -24,6 +24,7 @@
 		30BCC37429F1AA990014E472 /* DayCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCC37329F1AA990014E472 /* DayCollectionView.swift */; };
 		30E268DC29F30B4600D3958C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E268DB29F30B4600D3958C /* RootViewController.swift */; };
 		30E268DE29F30D5400D3958C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E268DD29F30D5300D3958C /* DetailViewController.swift */; };
+		30E268E029F3EE4400D3958C /* RootButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E268DF29F3EE4400D3958C /* RootButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		30BCC37329F1AA990014E472 /* DayCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCollectionView.swift; sourceTree = "<group>"; };
 		30E268DB29F30B4600D3958C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		30E268DD29F30D5300D3958C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		30E268DF29F3EE4400D3958C /* RootButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				3003348529F2F32C00001467 /* RootView.swift */,
 				30E268DB29F30B4600D3958C /* RootViewController.swift */,
+				30E268DF29F3EE4400D3958C /* RootButton.swift */,
 			);
 			path = RootViews;
 			sourceTree = "<group>";
@@ -80,8 +83,8 @@
 		3003348729F2F47300001467 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				3056E47E29F11A5900A99B47 /* MainController.swift */,
-				30E268DD29F30D5300D3958C /* DetailViewController.swift */,
+				30E268E129F3F71500D3958C /* MainView */,
+				30E268E229F3F72400D3958C /* DetailsView */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -137,6 +140,22 @@
 				3056E47029EFEA1200A99B47 /* HourViewCell.swift */,
 			);
 			path = DayCollectionView;
+			sourceTree = "<group>";
+		};
+		30E268E129F3F71500D3958C /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				3056E47E29F11A5900A99B47 /* MainController.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		30E268E229F3F72400D3958C /* DetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				30E268DD29F30D5300D3958C /* DetailViewController.swift */,
+			);
+			path = DetailsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +244,7 @@
 				30728F9C29F2C67F007429F2 /* Func.swift in Sources */,
 				3056E47829F03C7800A99B47 /* UIColor.swift in Sources */,
 				3003348629F2F32C00001467 /* RootView.swift in Sources */,
+				30E268E029F3EE4400D3958C /* RootButton.swift in Sources */,
 				3056E45A29EFC7C300A99B47 /* SceneDelegate.swift in Sources */,
 				3056E47A29F03CC000A99B47 /* Gradient.swift in Sources */,
 				3003348329F2EF9500001467 /* DayViewCell.swift in Sources */,
