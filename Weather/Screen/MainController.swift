@@ -7,36 +7,39 @@
 
 import UIKit
 import SnapKit
+import SwiftUI
 
-class MainController: UIViewController, ConstraintRelatableTarget {
+class MainController: RootViewController {
     
     private var dayCollectionView = DayCollectionView()
     private var weekCollectionView = WeeklyCollectionView()
     
-    private let attentionView: RootView = {
-        let view = RootView()
+    private let attentionView: UIView = {
+        let view = UIView()
         view.backgroundColor = UIColor(named: "Attention")
         view.layer.cornerRadius = 12
         return view
     }()
     
-    private let mainCardView: RootView = {
-        let view = RootView()
-        view.backgroundColor = .blue
+    private let mainCardView: UIView = {
+        let view = UIView()
         view.layer.cornerRadius = 12
+        view.backgroundColor = .systemBlue
         return view
     }()
     
-//    private let pinImage: UIImage = {
-//        let image = UIImage(named: "mappin.and.ellipse")
-//        image?.withTintColor(UIColor(named: "Symbol")!)
-//        return image! ?? default value
-//    }()
+    let pinImage: UIImageView = {
+        let pinImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
+        pinImage.contentMode = .scaleAspectFit
+        pinImage.tintColor = UIColor(named: "Symbol")
+        return pinImage
+    }()
+    
     private let locationButton: UIButton = {
         let button = UIButton()
-        
         return button
     }()
+    
     private let hourLable: UILabel = {
         let lable = UILabel()
         lable.text = "Hourly Weather"
@@ -45,6 +48,7 @@ class MainController: UIViewController, ConstraintRelatableTarget {
         lable.font = UIFont(name: "Noto Sans Kannada Bold", size: 20)
         return lable
     }()
+    
     private let dayLable: UILabel = {
         let lable = UILabel()
         lable.text = "Daily"
@@ -55,13 +59,12 @@ class MainController: UIViewController, ConstraintRelatableTarget {
     }()
     
     
-    
+    //MARK: - WDL
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(named: "Background")
         setup()
-        
         
     }
 }
@@ -110,7 +113,18 @@ extension MainController {
             make.height.equalTo(86)
         }
             
+        view.addSubview(pinImage)
+        pinImage.image = UIImage(systemName: "location.circle.fill")
+        pinImage.snp.makeConstraints { make in
+            //make.leading.trailing.equalToSuperview()
+            make.top.equalToSuperview().inset(68)
+            make.left.equalToSuperview().inset(16)
+        }
             
         }
     }
+
+private extension MainController {
+    
+}
 

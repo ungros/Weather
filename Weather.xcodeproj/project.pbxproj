@@ -22,6 +22,8 @@
 		3056E47F29F11A5900A99B47 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056E47E29F11A5900A99B47 /* MainController.swift */; };
 		30728F9C29F2C67F007429F2 /* Func.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30728F9B29F2C67F007429F2 /* Func.swift */; };
 		30BCC37429F1AA990014E472 /* DayCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCC37329F1AA990014E472 /* DayCollectionView.swift */; };
+		30E268DC29F30B4600D3958C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E268DB29F30B4600D3958C /* RootViewController.swift */; };
+		30E268DE29F30D5400D3958C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E268DD29F30D5300D3958C /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		3056E47E29F11A5900A99B47 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		30728F9B29F2C67F007429F2 /* Func.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Func.swift; sourceTree = "<group>"; };
 		30BCC37329F1AA990014E472 /* DayCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCollectionView.swift; sourceTree = "<group>"; };
+		30E268DB29F30B4600D3958C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		30E268DD29F30D5300D3958C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				3003348529F2F32C00001467 /* RootView.swift */,
+				30E268DB29F30B4600D3958C /* RootViewController.swift */,
 			);
 			path = RootViews;
 			sourceTree = "<group>";
@@ -76,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				3056E47E29F11A5900A99B47 /* MainController.swift */,
+				30E268DD29F30D5300D3958C /* DetailViewController.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 				3056E47F29F11A5900A99B47 /* MainController.swift in Sources */,
 				3056E47129EFEA1300A99B47 /* HourViewCell.swift in Sources */,
 				3056E47529EFF08C00A99B47 /* WeatherData.swift in Sources */,
+				30E268DC29F30B4600D3958C /* RootViewController.swift in Sources */,
 				3056E45829EFC7C300A99B47 /* AppDelegate.swift in Sources */,
 				3003348129F2EF2500001467 /* WeeklyCollectionView.swift in Sources */,
 				30728F9C29F2C67F007429F2 /* Func.swift in Sources */,
@@ -221,6 +228,7 @@
 				3056E45A29EFC7C300A99B47 /* SceneDelegate.swift in Sources */,
 				3056E47A29F03CC000A99B47 /* Gradient.swift in Sources */,
 				3003348329F2EF9500001467 /* DayViewCell.swift in Sources */,
+				30E268DE29F30D5400D3958C /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
