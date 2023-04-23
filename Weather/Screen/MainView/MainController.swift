@@ -14,21 +14,12 @@ class MainController: RootViewController {
     private var dayCollectionView = DayCollectionView()
     private var weekCollectionView = WeeklyCollectionView()
     
-    
-    
-    private let attentionView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(named: "Attention")
-        view.layer.cornerRadius = 12
-        return view
-    }()
-    
-    private let mainCardView: UIView = {
-        let view = UIView()
-        view.layer.cornerRadius = 12
-        view.backgroundColor = .systemBlue
-        return view
-    }()
+    private let mainCardView = MainCardView() 
+//        let view = UIView()
+//        view.layer.cornerRadius = 12
+//        view.backgroundColor = .systemBlue
+//        return view
+//    }()
     
     let pinImage: UIImageView = {
         let pinImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
@@ -58,6 +49,13 @@ class MainController: RootViewController {
         //lable.font = Extensions.Font.sfProDisplay(with: 20)
         lable.font = UIFont(name: "Noto Sans Kannada Bold", size: 20)
         return lable
+    }()
+    
+    private let attentionView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(named: "Attention")
+        view.layer.cornerRadius = 12
+        return view
     }()
     
     private let dayLable: UILabel = {
@@ -107,7 +105,7 @@ extension MainController {
             make.leading.trailing.equalToSuperview().inset(16)
             make.top.equalToSuperview().inset(646)
             make.height.equalTo(240)
-            make.bottom.equalToSuperview().inset(16)
+            //make.bottom.equalToSuperview().inset(16)
         }
         
         view.addSubview(mainCardView)
@@ -151,6 +149,6 @@ extension MainController {
     }
 
 private extension MainController {
-    
+   
 }
 
