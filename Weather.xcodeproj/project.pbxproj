@@ -24,8 +24,9 @@
 		30E268DC29F30B4600D3958C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E268DB29F30B4600D3958C /* RootViewController.swift */; };
 		30E268DE29F30D5400D3958C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E268DD29F30D5300D3958C /* DetailViewController.swift */; };
 		30E268E029F3EE4400D3958C /* RootButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E268DF29F3EE4400D3958C /* RootButton.swift */; };
-		30E268E729F5636500D3958C /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E268E629F5636500D3958C /* URLSession.swift */; };
+		30E268E729F5636500D3958C /* URLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E268E629F5636500D3958C /* URLService.swift */; };
 		30E268E929F56C9400D3958C /* MainCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E268E829F56C9400D3958C /* MainCardView.swift */; };
+		30E268EC29F6A97A00D3958C /* URLService 2.0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E268EB29F6A97A00D3958C /* URLService 2.0.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,8 +48,9 @@
 		30E268DB29F30B4600D3958C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		30E268DD29F30D5300D3958C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		30E268DF29F3EE4400D3958C /* RootButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootButton.swift; sourceTree = "<group>"; };
-		30E268E629F5636500D3958C /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		30E268E629F5636500D3958C /* URLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLService.swift; sourceTree = "<group>"; };
 		30E268E829F56C9400D3958C /* MainCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardView.swift; sourceTree = "<group>"; };
+		30E268EB29F6A97A00D3958C /* URLService 2.0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLService 2.0.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,13 +112,13 @@
 		3056E45629EFC7C300A99B47 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				30E268EA29F6A95B00D3958C /* Service */,
 				3003348729F2F47300001467 /* Screen */,
 				3056E47B29F0593800A99B47 /* DayCollectionView */,
 				3003347F29F2EEE400001467 /* WeeklyCollectionView */,
 				3003348429F2F31500001467 /* RootViews */,
 				3056E47629F03C4600A99B47 /* Extensions */,
 				3056E47429EFF08C00A99B47 /* WeatherData.swift */,
-				30E268E629F5636500D3958C /* URLSession.swift */,
 				3056E45729EFC7C300A99B47 /* AppDelegate.swift */,
 				3056E45929EFC7C300A99B47 /* SceneDelegate.swift */,
 				3056E46029EFC7C500A99B47 /* Assets.xcassets */,
@@ -159,6 +161,15 @@
 				30E268DD29F30D5300D3958C /* DetailViewController.swift */,
 			);
 			path = DetailsView;
+			sourceTree = "<group>";
+		};
+		30E268EA29F6A95B00D3958C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				30E268E629F5636500D3958C /* URLService.swift */,
+				30E268EB29F6A97A00D3958C /* URLService 2.0.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,11 +249,12 @@
 			files = (
 				30BCC37429F1AA990014E472 /* DayCollectionView.swift in Sources */,
 				3056E47F29F11A5900A99B47 /* MainController.swift in Sources */,
-				30E268E729F5636500D3958C /* URLSession.swift in Sources */,
+				30E268E729F5636500D3958C /* URLService.swift in Sources */,
 				3056E47129EFEA1300A99B47 /* HourViewCell.swift in Sources */,
 				3056E47529EFF08C00A99B47 /* WeatherData.swift in Sources */,
 				30E268DC29F30B4600D3958C /* RootViewController.swift in Sources */,
 				3056E45829EFC7C300A99B47 /* AppDelegate.swift in Sources */,
+				30E268EC29F6A97A00D3958C /* URLService 2.0.swift in Sources */,
 				3003348129F2EF2500001467 /* WeeklyCollectionView.swift in Sources */,
 				30E268E929F56C9400D3958C /* MainCardView.swift in Sources */,
 				30728F9C29F2C67F007429F2 /* Func.swift in Sources */,

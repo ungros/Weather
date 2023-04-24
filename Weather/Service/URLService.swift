@@ -7,7 +7,12 @@
 
 import Foundation
 
-class urlS {
+protocol URLServiceProtocol {
+    
+}
+
+final class URLService {
+    
     func getWeather() {
         let urlString = "https://api.open-meteo.com/v1/forecast?latitude=34.90&longitude=56.19&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m"
         let url = URL(string: urlString)!
@@ -21,4 +26,8 @@ class urlS {
         }
         task.resume()
     }
+}
+
+extension URLService {
+    
 }

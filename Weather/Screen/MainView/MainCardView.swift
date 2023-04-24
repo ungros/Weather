@@ -9,10 +9,41 @@ import UIKit
 
 class MainCardView: UIView {
     
+    let image: UIImageView = {
+        let image = UIImageView()
+        image.frame(forAlignmentRect: CGRect(x: 0, y: 0, width: 55, height: 55))
+        image.image = UIImage(named: "Cloud")
+        return image
+    }()
+    
     let weatherLable: UILabel = {
         let lable = UILabel()
         lable.font = UIFont(name: "Noto Sans Kannada Semibold", size: 20)
         lable.textColor = UIColor(named: "Background")
+        return lable
+    }()
+    
+    let dateLable: UILabel = {
+        let lable = UILabel()
+        lable.font = UIFont(name: "Noto Sans Kannada Semibold", size: 14)
+        lable.textColor = UIColor(named: "Background")
+        lable.text = "Monte, 20 Desember 2023"
+        return lable
+    }()
+    
+    let locationLable: UILabel = {
+        let lable = UILabel()
+        lable.font = UIFont(name: "Noto Sans Kannada Bold", size: 20)
+        lable.textColor = UIColor(named: "Background")
+        lable.text = "San Francisco"
+        return lable
+    }()
+    
+    let updateLable: UILabel = {
+        let lable = UILabel()
+        lable.font = UIFont(name: "Noto Sans Kannada Semibold", size: 14)
+        lable.textColor = UIColor(named: "Background")
+        lable.text = "Last update 4.00 PM"
         return lable
     }()
     
@@ -36,6 +67,30 @@ private extension MainCardView {
         weatherLable.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(100)
             make.top.equalToSuperview().inset(75)
+        }
+        
+        addSubview(locationLable)
+        locationLable.snp.makeConstraints { make in
+            make.left.equalTo(weatherLable)
+            make.top.equalToSuperview().inset(104)
+        }
+        
+        addSubview(dateLable)
+        dateLable.snp.makeConstraints { make in
+            make.left.equalToSuperview().inset(24)
+            make.top.equalToSuperview().inset(24)
+        }
+        
+        addSubview(image)
+        image.snp.makeConstraints { make in
+            make.left.equalToSuperview()
+            make.top.equalToSuperview().inset(66)
+        }
+        
+        addSubview(updateLable)
+        updateLable.snp.makeConstraints { make in
+            make.left.equalToSuperview().inset(24)
+            make.bottom.equalToSuperview().inset(24)
         }
     }
 }
