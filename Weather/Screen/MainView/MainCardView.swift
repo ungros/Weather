@@ -55,6 +55,37 @@ class MainCardView: UIView {
         getWeather()
     }
     
+    private let arrowButton: RootButton = {
+        let button = RootButton(type: .system)
+        
+        button.setImage(UIImage(systemName: "arrowtriangle.down.fill"), for: .normal)
+        button.tintColor = UIColor(named: "Symbol")
+        return button
+    }()
+    
+    private let upDateButton: RootButton = {
+        let button = RootButton(type: .system)
+        button.setImage(UIImage(systemName: "cursorarrow.click.badge.clock"), for: .normal)
+        button.tintColor = UIColor(named: "Background")
+        //button.font.fontName = UIFont(name: "Noto Sans Kannada Bold", size: 20)
+        return button
+    }()
+    
+//    private let searchButton: RootButton = {
+//        let button = RootButton(type: .system)
+//        button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+//        button.tintColor = UIColor(named: "Background")
+//        return button
+//    }()
+    
+    let timeLable: UILabel = {
+        let lable = UILabel()
+        lable.font = UIFont(name: "Noto Sans Kannada Semibold", size: 14)
+        lable.textColor = UIColor(named: "Background")
+        lable.text = "4.00 PM"
+        return lable
+    }()
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -92,6 +123,20 @@ private extension MainCardView {
             make.left.equalToSuperview().inset(24)
             make.bottom.equalToSuperview().inset(24)
         }
+        
+        addSubview(upDateButton)
+        upDateButton.snp.makeConstraints { make in
+            make.left.equalToSuperview().inset(190)
+            make.height.equalTo(16)
+            make.width.equalTo(16)
+            make.center.equalTo(updateLable)
+        }
+        
+        addSubview(timeLable)
+        timeLable.snp.makeConstraints { make in
+            make.right.equalToSuperview().inset(24)
+            make.top.equalToSuperview().inset(24)
+        }
     }
 }
 
@@ -101,7 +146,7 @@ extension MainCardView {
         let url = URL(string: urlString)!
         let urlRequest = URLRequest(url: url)
         let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            if let data, let weather = try? JSONDecoder().decode(WeatherData.self, from: data) {
+            if let data, let weather = try? JSONDecoder().decode(Weather.self, from: data) {
                 DispatchQueue.main.async {
                     self.weatherLable.text = "\(Int(weather.currentWeather.temperature))º C"
                 }

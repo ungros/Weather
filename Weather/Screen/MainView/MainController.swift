@@ -72,7 +72,6 @@ class MainController: RootViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(named: "Background")
         setup()
         
     }
