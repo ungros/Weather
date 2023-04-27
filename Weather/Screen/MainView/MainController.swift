@@ -36,9 +36,10 @@ class MainController: RootViewController {
     
     private let arrowButton: RootButton = {
         let button = RootButton(type: .system)
-        
         button.setImage(UIImage(systemName: "arrowtriangle.down.fill"), for: .normal)
         button.tintColor = UIColor(named: "Symbol")
+        
+        button.addTarget(self, action: #selector(handlShowSearchScreen), for: .touchUpInside)
         return button
     }()
     
@@ -147,6 +148,7 @@ extension MainController {
         }
     }
 
+//MARK: - Selectors
 private extension MainController {
    
 }
