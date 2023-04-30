@@ -38,7 +38,6 @@ class MainController: RootViewController {
         let button = RootButton(type: .system)
         button.setImage(UIImage(systemName: "arrowtriangle.down.fill"), for: .normal)
         button.tintColor = UIColor(named: "Symbol")
-        
         button.addTarget(self, action: #selector(handlShowSearchScreen), for: .touchUpInside)
         return button
     }()
@@ -74,13 +73,16 @@ class MainController: RootViewController {
         super.viewDidLoad()
         
         setup()
+        navigationController?.isNavigationBarHidden = true
         
     }
+    
+    
 }
 
 extension MainController {
     func setup() {
-        
+        handlShowSearchScreen()
         view.addSubview(hourLable)
         hourLable.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(16)
@@ -146,10 +148,14 @@ extension MainController {
             make.centerY.equalTo(pinImage)
         }
         }
+    
     }
 
 //MARK: - Selectors
-private extension MainController {
-   
+extension MainController {
+    @objc func handlShowSearchScreen() {
+        let controller = SearchController()
+        present(SearchController(), animated: true)
+    }
 }
 

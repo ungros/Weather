@@ -18,7 +18,6 @@
 		3056E47829F03C7800A99B47 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056E47729F03C7800A99B47 /* UIColor.swift */; };
 		3056E47A29F03CC000A99B47 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056E47929F03CC000A99B47 /* Gradient.swift */; };
 		3056E47F29F11A5900A99B47 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056E47E29F11A5900A99B47 /* MainController.swift */; };
-		305B622829F7A949000A449E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305B622729F7A949000A449E /* Storyboard.storyboard */; };
 		305B622A29F7B268000A449E /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305B622929F7B268000A449E /* SearchController.swift */; };
 		30728F9C29F2C67F007429F2 /* Func.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30728F9B29F2C67F007429F2 /* Func.swift */; };
 		30BCC37429F1AA990014E472 /* DayCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCC37329F1AA990014E472 /* DayCollectionView.swift */; };
@@ -44,7 +43,6 @@
 		3056E47729F03C7800A99B47 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		3056E47929F03CC000A99B47 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		3056E47E29F11A5900A99B47 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
-		305B622729F7A949000A449E /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		305B622929F7B268000A449E /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		30728F9B29F2C67F007429F2 /* Func.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Func.swift; sourceTree = "<group>"; };
 		30BCC37329F1AA990014E472 /* DayCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCollectionView.swift; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 		3056E44B29EFC7C300A99B47 = {
 			isa = PBXGroup;
 			children = (
-				305B622729F7A949000A449E /* Storyboard.storyboard */,
 				3056E45629EFC7C300A99B47 /* Weather */,
 				3056E45529EFC7C300A99B47 /* Products */,
 			);
@@ -243,7 +240,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3056E46129EFC7C500A99B47 /* Assets.xcassets in Resources */,
-				305B622829F7A949000A449E /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
