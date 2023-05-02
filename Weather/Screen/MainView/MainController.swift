@@ -11,6 +11,8 @@ import SwiftUI
 
 class MainController: RootViewController {
     
+    private let rearchArea = SearchController(searchResultsController: ResultsController())
+    
     private var dayCollectionView = DayCollectionView()
     private var weekCollectionView = WeeklyCollectionView()
     
@@ -154,8 +156,8 @@ extension MainController {
 //MARK: - Selectors
 extension MainController {
     @objc func handlShowSearchScreen() {
-        let controller = SearchController()
-        present(SearchController(), animated: true)
+        let controller = rearchArea
+        present(rearchArea, animated: true)
     }
 }
 

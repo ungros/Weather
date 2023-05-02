@@ -8,12 +8,12 @@
 import SnapKit
 import UIKit
 
-class SearchController: RootViewController {
-    
-    let searchBar = UISearchBar()
+//MARK: Search
+class SearchController: UISearchController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         setup()
     }
@@ -22,11 +22,27 @@ class SearchController: RootViewController {
 extension SearchController {
     func setup() {
         
-        view.addSubview(searchBar)
-        searchBar.snp.makeConstraints { make in
-            make.leading.equalToSuperview()
-            make.center.equalToSuperview()
-            make.top.equalToSuperview().inset(30)
+//        view.addSubview(searchBar)
+//        searchBar.snp.makeConstraints { make in
+//            make.leading.equalToSuperview()
+//            make.center.equalToSuperview()
+//            make.top.equalToSuperview().inset(30)
+//        }
+        
+        func updateSearchResults(for searchController: SearchController) {
+            guard let text = searchBar.text else {
+                return
+            }
+            print(text)
         }
+    }
+}
+
+//MARK: Results
+class ResultsController: RootViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemRed
     }
 }
