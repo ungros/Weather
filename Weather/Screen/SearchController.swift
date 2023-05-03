@@ -7,6 +7,7 @@
 
 import SnapKit
 import UIKit
+import CoreLocation
 
 //MARK: Search
 class SearchController: UISearchController {
@@ -46,3 +47,11 @@ class ResultsController: RootViewController {
         view.backgroundColor = .systemRed
     }
 }
+
+////extension ResultsController: UISearchResultsUpdating {
+////    func updateSearchResults(for searchController: UISearchController) {
+////        <#code#>
+////    }
+////
+//    
+//}

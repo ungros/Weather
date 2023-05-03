@@ -140,8 +140,19 @@ private extension MainCardView {
     }
 }
 
+//MARK: - URLService
 extension MainCardView {
+    
+    func getCurrentTime() -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        let day = calendar.component(.day, from: date)
+    }
+    
     func getWeather() {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .short
         let urlString = "https://api.open-meteo.com/v1/forecast?latitude=34.90&longitude=56.19&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m"
         let url = URL(string: urlString)!
         let urlRequest = URLRequest(url: url)
@@ -149,6 +160,7 @@ extension MainCardView {
             if let data, let weather = try? JSONDecoder().decode(Weather.self, from: data) {
                 DispatchQueue.main.async {
                     self.weatherLable.text = "\(Int(weather.currentWeather.temperature))º C"
+                    self.timeLable.text = "\(timeFormatter.string(from: weather.currentWeather.time))"
                 }
             }else{
                 return
