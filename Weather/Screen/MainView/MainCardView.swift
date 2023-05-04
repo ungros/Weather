@@ -6,8 +6,10 @@
 //
 import SnapKit
 import UIKit
+import CoreLocation
 
 class MainCardView: UIView {
+//MARK: - UIStates
     
     let image: UIImageView = {
         let image = UIImageView()
@@ -71,12 +73,12 @@ class MainCardView: UIView {
         return button
     }()
     
-//    private let searchButton: RootButton = {
-//        let button = RootButton(type: .system)
-//        button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
-//        button.tintColor = UIColor(named: "Background")
-//        return button
-//    }()
+    //    private let searchButton: RootButton = {
+    //        let button = RootButton(type: .system)
+    //        button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+    //        button.tintColor = UIColor(named: "Background")
+    //        return button
+    //    }()
     
     let timeLable: UILabel = {
         let lable = UILabel()
@@ -86,9 +88,15 @@ class MainCardView: UIView {
         return lable
     }()
     
+//MARK: - LogicStates
+    let locationService = CLLocationManager()
+    
+
+//MARK: - Init
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     
 }
@@ -176,4 +184,8 @@ extension MainCardView {
         }
         task.resume()
     }
+}
+
+extension MainCardView {
+    private func 
 }
