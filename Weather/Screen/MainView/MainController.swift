@@ -40,6 +40,14 @@ class MainController: RootViewController {
         let button = RootButton(type: .system)
         button.setImage(UIImage(systemName: "arrowtriangle.down.fill"), for: .normal)
         button.tintColor = UIColor(named: "Symbol")
+        //button.addTarget(self, action: #selector(handlShowSearchScreen), for: .touchUpInside)
+        return button
+    }()
+    
+    private let searchButton: RootButton = {
+        let button = RootButton(type: .system)
+        button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+        button.tintColor = UIColor(named: "Symbol")
         button.addTarget(self, action: #selector(handlShowSearchScreen), for: .touchUpInside)
         return button
     }()
@@ -148,6 +156,15 @@ extension MainController {
             make.height.equalTo(8)
             make.width.equalTo(8)
             make.centerY.equalTo(pinImage)
+        }
+        
+        view.addSubview(searchButton)
+        searchButton.snp.makeConstraints { make in
+            make.top.equalTo(locationButton)
+            make.right.equalToSuperview().inset(16)
+            make.centerY.equalTo(locationButton)
+            make.height.equalTo(pinImage)
+            make.width.equalTo(pinImage)
         }
         }
     
