@@ -82,7 +82,7 @@ class MainCardView: UIView {
         let lable = UILabel()
         lable.font = UIFont(name: "Noto Sans Kannada Semibold", size: 14)
         lable.textColor = UIColor(named: "Background")
-        lable.text = "4.00 PM"
+        //lable.text = ""
         return lable
     }()
     
@@ -147,6 +147,14 @@ extension MainCardView {
         let date = Date()
         let calendar = Calendar.current
         let day = calendar.component(.day, from: date)
+        let month = calendar.component(.month, from: date)
+        let year = calendar.component(.year, from: date)
+        let hour = calendar.component(.hour, from: date)
+        let minute = calendar.component(.minute, from: date)
+        
+        let thedate = "\(day)|\(month)|\(year)"
+        let thetime = "\(hour):\(minute)"
+        return thetime
     }
     
     func getWeather() {
@@ -160,7 +168,7 @@ extension MainCardView {
             if let data, let weather = try? JSONDecoder().decode(Weather.self, from: data) {
                 DispatchQueue.main.async {
                     self.weatherLable.text = "\(Int(weather.currentWeather.temperature))º C"
-                    self.timeLable.text = "\(timeFormatter.string(from: weather.currentWeather.time))"
+                    self.timeLable.text = "\(self.getCurrentTime())"
                 }
             }else{
                 return
