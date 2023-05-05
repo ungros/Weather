@@ -186,6 +186,6 @@ extension MainCardView {
     }
 }
 
-extension MainCardView {
-    private func 
-}
+//extension MainCardView {
+//    private func 
+//}
