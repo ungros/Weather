@@ -61,12 +61,14 @@ class MainController: RootViewController {
         return lable
     }()
     
-    private let attentionView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(named: "Attention")
-        view.layer.cornerRadius = 12
-        return view
-    }()
+//    private let allertView: AllertCardView = {
+//        let view = UIView()
+//        view.backgroundColor = UIColor(named: "Attention")
+//        view.layer.cornerRadius = 12
+//        return view
+//    }()
+    
+    private let allertView = AllertCardView()
     
     private let dayLable: UILabel = {
         let lable = UILabel()
@@ -127,8 +129,8 @@ extension MainController {
             make.height.equalTo(193)
         }
         
-        view.addSubview(attentionView)
-        attentionView.snp.makeConstraints { make in
+        view.addSubview(allertView)
+        allertView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(16)
             make.top.equalToSuperview().inset(544)
             make.height.equalTo(86)

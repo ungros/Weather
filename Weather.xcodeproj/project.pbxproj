@@ -19,6 +19,7 @@
 		3056E47A29F03CC000A99B47 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056E47929F03CC000A99B47 /* Gradient.swift */; };
 		3056E47F29F11A5900A99B47 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056E47E29F11A5900A99B47 /* MainController.swift */; };
 		305B622A29F7B268000A449E /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305B622929F7B268000A449E /* SearchController.swift */; };
+		3066FD972A057A0E002AB99B /* AllertCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3066FD962A057A0E002AB99B /* AllertCardView.swift */; };
 		30728F9C29F2C67F007429F2 /* Func.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30728F9B29F2C67F007429F2 /* Func.swift */; };
 		30BCC37429F1AA990014E472 /* DayCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCC37329F1AA990014E472 /* DayCollectionView.swift */; };
 		30E268DC29F30B4600D3958C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E268DB29F30B4600D3958C /* RootViewController.swift */; };
@@ -44,6 +45,7 @@
 		3056E47929F03CC000A99B47 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		3056E47E29F11A5900A99B47 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		305B622929F7B268000A449E /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		3066FD962A057A0E002AB99B /* AllertCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllertCardView.swift; sourceTree = "<group>"; };
 		30728F9B29F2C67F007429F2 /* Func.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Func.swift; sourceTree = "<group>"; };
 		30BCC37329F1AA990014E472 /* DayCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCollectionView.swift; sourceTree = "<group>"; };
 		30E268DB29F30B4600D3958C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				3056E47E29F11A5900A99B47 /* MainController.swift */,
 				30E268E829F56C9400D3958C /* MainCardView.swift */,
+				3066FD962A057A0E002AB99B /* AllertCardView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				30BCC37429F1AA990014E472 /* DayCollectionView.swift in Sources */,
 				305B622A29F7B268000A449E /* SearchController.swift in Sources */,
 				3056E47F29F11A5900A99B47 /* MainController.swift in Sources */,
+				3066FD972A057A0E002AB99B /* AllertCardView.swift in Sources */,
 				30E268E729F5636500D3958C /* URLService.swift in Sources */,
 				3056E47129EFEA1300A99B47 /* HourViewCell.swift in Sources */,
 				30E268DC29F30B4600D3958C /* RootViewController.swift in Sources */,
