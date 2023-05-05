@@ -88,14 +88,18 @@
 			path = RootViews;
 			sourceTree = "<group>";
 		};
-		3003348729F2F47300001467 /* Screen */ = {
+		3003348729F2F47300001467 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				30E268E129F3F71500D3958C /* MainView */,
-				30E268E229F3F72400D3958C /* DetailsView */,
-				305B622929F7B268000A449E /* SearchController.swift */,
+				3056E47E29F11A5900A99B47 /* MainController.swift */,
+				30E268E129F3F71500D3958C /* Segments */,
+				3056E47B29F0593800A99B47 /* DayCollectionView */,
+				3003347F29F2EEE400001467 /* WeeklyCollectionView */,
+				30E268E229F3F72400D3958C /* SearchView */,
+				3003348429F2F31500001467 /* RootViews */,
+				30E268DD29F30D5300D3958C /* DetailViewController.swift */,
 			);
-			path = Screen;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		3056E44B29EFC7C300A99B47 = {
@@ -117,11 +121,8 @@
 		3056E45629EFC7C300A99B47 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				3003348729F2F47300001467 /* UI */,
 				30E268EA29F6A95B00D3958C /* Service */,
-				3003348729F2F47300001467 /* Screen */,
-				3056E47B29F0593800A99B47 /* DayCollectionView */,
-				3003347F29F2EEE400001467 /* WeeklyCollectionView */,
-				3003348429F2F31500001467 /* RootViews */,
 				3056E47629F03C4600A99B47 /* Extensions */,
 				3056E45729EFC7C300A99B47 /* AppDelegate.swift */,
 				3056E45929EFC7C300A99B47 /* SceneDelegate.swift */,
@@ -150,22 +151,21 @@
 			path = DayCollectionView;
 			sourceTree = "<group>";
 		};
-		30E268E129F3F71500D3958C /* MainView */ = {
+		30E268E129F3F71500D3958C /* Segments */ = {
 			isa = PBXGroup;
 			children = (
-				3056E47E29F11A5900A99B47 /* MainController.swift */,
 				30E268E829F56C9400D3958C /* MainCardView.swift */,
 				3066FD962A057A0E002AB99B /* AllertCardView.swift */,
 			);
-			path = MainView;
+			path = Segments;
 			sourceTree = "<group>";
 		};
-		30E268E229F3F72400D3958C /* DetailsView */ = {
+		30E268E229F3F72400D3958C /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
-				30E268DD29F30D5300D3958C /* DetailViewController.swift */,
+				305B622929F7B268000A449E /* SearchController.swift */,
 			);
-			path = DetailsView;
+			path = SearchView;
 			sourceTree = "<group>";
 		};
 		30E268EA29F6A95B00D3958C /* Service */ = {

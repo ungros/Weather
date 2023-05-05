@@ -16,12 +16,8 @@ class MainController: RootViewController {
     private var dayCollectionView = DayCollectionView()
     private var weekCollectionView = WeeklyCollectionView()
     
-    private let mainCardView = MainCardView() 
-//        let view = UIView()
-//        view.layer.cornerRadius = 12
-//        view.backgroundColor = .systemBlue
-//        return view
-//    }()
+    private let mainCardView = MainCardView()
+    private let allertView = AllertCardView()
     
     let pinImage: UIImageView = {
         let pinImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
@@ -60,15 +56,6 @@ class MainController: RootViewController {
         lable.font = UIFont(name: "Noto Sans Kannada Bold", size: 20)
         return lable
     }()
-    
-//    private let allertView: AllertCardView = {
-//        let view = UIView()
-//        view.backgroundColor = UIColor(named: "Attention")
-//        view.layer.cornerRadius = 12
-//        return view
-//    }()
-    
-    private let allertView = AllertCardView()
     
     private let dayLable: UILabel = {
         let lable = UILabel()
