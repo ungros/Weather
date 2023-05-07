@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DayCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class HorszontalCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
    
     let cells = 9
 
@@ -22,7 +22,7 @@ class DayCollectionView: UICollectionView, UICollectionViewDelegate, UICollectio
        
         delegate = self
         dataSource = self
-        register(HourViewCell.self, forCellWithReuseIdentifier: HourViewCell.reuseId)
+        register(HorizontalViewCell.self, forCellWithReuseIdentifier: HorizontalViewCell.reuseId)
     }
     
     required init?(coder: NSCoder) {
@@ -31,14 +31,14 @@ class DayCollectionView: UICollectionView, UICollectionViewDelegate, UICollectio
     
 }
 
-extension DayCollectionView {
+extension HorszontalCollectionView {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cells
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: HourViewCell.reuseId, for: indexPath)
+        let cell = dequeueReusableCell(withReuseIdentifier: HorizontalViewCell.reuseId, for: indexPath)
         return cell
     }
     

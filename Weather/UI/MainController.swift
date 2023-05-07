@@ -13,8 +13,8 @@ class MainController: RootViewController {
     
     private let rearchArea = SearchController(searchResultsController: ResultsController())
     
-    private var dayCollectionView = DayCollectionView()
-    private var weekCollectionView = WeeklyCollectionView()
+    private var dayCollectionView = HorszontalCollectionView()
+    private var weekCollectionView = VerticalCollectionView()
     
     private let mainCardView = MainCardView()
     private let allertView = AllertCardView()

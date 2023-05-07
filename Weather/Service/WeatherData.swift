@@ -14,7 +14,7 @@ struct Weather: Decodable {
     let timezone, timezoneAbbreviation: String
     let elevation: Int
     let currentWeather: CurrentWeather
-    let hourlyUnits: [HourlyUnits]
+    let hourlyUnits: HourlyUnits
 
     enum CodingKeys: String, CodingKey {
         case latitude, longitude

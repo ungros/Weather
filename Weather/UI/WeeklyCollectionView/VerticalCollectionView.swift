@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WeeklyCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class VerticalCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
    
     let cells = 9
 
@@ -22,7 +22,7 @@ class WeeklyCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
        
         delegate = self
         dataSource = self
-        register(DayViewCell.self, forCellWithReuseIdentifier: DayViewCell.reuseId)
+        register(VerticalViewCell.self, forCellWithReuseIdentifier: VerticalViewCell.reuseId)
     }
     
     required init?(coder: NSCoder) {
@@ -31,14 +31,14 @@ class WeeklyCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
     
 }
 
-extension WeeklyCollectionView {
+extension VerticalCollectionView {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cells
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: DayViewCell.reuseId, for: indexPath)
+        let cell = dequeueReusableCell(withReuseIdentifier: VerticalViewCell.reuseId, for: indexPath)
         return cell
     }
     

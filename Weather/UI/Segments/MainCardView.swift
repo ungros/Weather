@@ -10,7 +10,6 @@ import CoreLocation
 
 class MainCardView: UIView {
 //MARK: - UIStates
-    
     let image: UIImageView = {
         let image = UIImageView()
         image.frame(forAlignmentRect: CGRect(x: 0, y: 0, width: 55, height: 55))
@@ -49,14 +48,6 @@ class MainCardView: UIView {
         return lable
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: CGRect(x: 0, y: 0, width: 343, height: 193))
-        layer.cornerRadius = 12
-        backgroundColor = .systemBlue
-        setup()
-        getWeather()
-    }
-    
     private let arrowButton: RootButton = {
         let button = RootButton(type: .system)
         
@@ -69,22 +60,14 @@ class MainCardView: UIView {
         let button = RootButton(type: .system)
         button.setImage(UIImage(systemName: "cursorarrow.click.badge.clock"), for: .normal)
         button.tintColor = UIColor(named: "Background")
-        //button.font.fontName = UIFont(name: "Noto Sans Kannada Bold", size: 20)
         return button
     }()
-    
-    //    private let searchButton: RootButton = {
-    //        let button = RootButton(type: .system)
-    //        button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
-    //        button.tintColor = UIColor(named: "Background")
-    //        return button
-    //    }()
     
     let timeLable: UILabel = {
         let lable = UILabel()
         lable.font = UIFont(name: "Noto Sans Kannada Semibold", size: 14)
         lable.textColor = UIColor(named: "Background")
-        //lable.text = ""
+        //lable.text = String(.getCurrentTime())
         return lable
     }()
     
@@ -93,12 +76,18 @@ class MainCardView: UIView {
     
 
 //MARK: - Init
+    override init(frame: CGRect) {
+        super.init(frame: CGRect(x: 0, y: 0, width: 343, height: 193))
+        layer.cornerRadius = 12
+        backgroundColor = .systemBlue
+        setup()
+        getWeather()
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    
+  
 }
 private extension MainCardView {
     func setup() {
@@ -160,7 +149,7 @@ extension MainCardView {
         let hour = calendar.component(.hour, from: date)
         let minute = calendar.component(.minute, from: date)
         
-        let thedate = "\(day)|\(month)|\(year)"
+        //let thedate = "\(day)|\(month)|\(year)"
         let thetime = "\(hour):\(minute)"
         return thetime
     }

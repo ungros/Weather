@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class HourViewCell: UICollectionViewCell {
+class HorizontalViewCell: UICollectionViewCell {
     
     static let reuseId = "HourViewCell"
     
@@ -16,7 +16,7 @@ class HourViewCell: UICollectionViewCell {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.layer.cornerRadius = 4
-        stack.backgroundColor = UIColor(named: "Card")
+        stack.backgroundColor = UIColor(named: "HorizontalViewCell")
         return stack
     }()
     
@@ -57,7 +57,7 @@ class HourViewCell: UICollectionViewCell {
     }
 }
 
-extension HourViewCell {
+extension HorizontalViewCell {
     func setup() {
         
         addSubview(stackView)
