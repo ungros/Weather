@@ -34,8 +34,9 @@ class MainController: RootViewController {
     
     private let arrowButton: RootButton = {
         let button = RootButton(type: .system)
-        button.setImage(UIImage(systemName: "arrowtriangle.down.fill"), for: .normal)
+        button.setImage(UIImage(named: "caret_down"), for: .normal)
         button.tintColor = UIColor(named: "Symbol")
+        button.sizeThatFits(CGSize(width: 24, height: 24))
         //button.addTarget(self, action: #selector(handlShowSearchScreen), for: .touchUpInside)
         return button
     }()
@@ -142,8 +143,8 @@ extension MainController {
         arrowButton.snp.makeConstraints { make in
             //make.top.equalToSuperview().inset(71)
             make.right.equalTo(locationButton).inset(-22)
-            make.height.equalTo(8)
-            make.width.equalTo(8)
+            make.height.equalTo(24)
+            make.width.equalTo(24)
             make.centerY.equalTo(pinImage)
         }
         

@@ -36,7 +36,7 @@ class HorizontalViewCell: UICollectionViewCell {
     
     let timeLable: UILabel = {
         let lable = UILabel()
-        lable.font = UIFont(name: "Noto Sans Kannada Regular", size: 14)
+        lable.font = Extensions.Font.NSK(with: 14)
         lable.textColor = UIColor(named: "Text")
         lable.text = "4.00 PM"
         return lable
