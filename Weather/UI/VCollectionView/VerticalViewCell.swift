@@ -68,22 +68,23 @@ extension VerticalViewCell {
         
         addSubview(stackView)
         stackView.snp.makeConstraints { make in
-            make.trailing.leading.equalToSuperview()
-            make.bottom.equalToSuperview()
-            make.top.equalToSuperview()
-            make.centerX.centerY.equalToSuperview()
+            
+            make.leading.trailing.equalToSuperview()
+            make.left.equalToSuperview().inset(16)
+            
+        
         }
         
         stackView.addSubview(degreeLable)
         degreeLable.snp.makeConstraints { make in
             make.right.equalToSuperview().inset(56)
-            make.centerY.equalToSuperview()
+            make.centerY.equalTo(stackView)
         }
         
         stackView.addSubview(arrowButton)
         arrowButton.snp.makeConstraints { make in
             make.right.equalToSuperview().inset(26)
-            make.centerY.equalTo(degreeLable)
+            make.centerY.equalToSuperview()
         }
         
         stackView.addSubview(dayLable)

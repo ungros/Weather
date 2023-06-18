@@ -58,7 +58,7 @@ class MainCardView: UIView {
     
     private let upDateButton: RootButton = {
         let button = RootButton(type: .system)
-        button.setImage(UIImage(systemName: "cursorarrow.click.badge.clock"), for: .normal)
+        button.setImage(UIImage(systemName: "gobackward"), for: .normal)
         button.tintColor = UIColor(named: "Background")
         return button
     }()

@@ -10,14 +10,22 @@ import UIKit
 class VerticalCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
    
     let cells = 9
-
+    let borderDistance: CGFloat = 16
+    
+    
+    
     init() {
         let layout = UICollectionViewFlowLayout()
         super.init(frame: .zero, collectionViewLayout: layout)
         
         layout.scrollDirection = .vertical
-        layout.minimumInteritemSpacing = 0
-        backgroundColor = .clear
+        layout.minimumInteritemSpacing = 12
+        contentInset = UIEdgeInsets(top: 0, left: borderDistance, bottom: 0, right: borderDistance)
+        //bordering cells - contentInset
+        
+        
+        
+        backgroundColor = .green
         showsVerticalScrollIndicator = false
        
         delegate = self
@@ -43,6 +51,6 @@ extension VerticalCollectionView {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 360, height: 72)
+        return CGSize(width: 500, height: 72)
     }
 }

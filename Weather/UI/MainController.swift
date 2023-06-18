@@ -104,15 +104,16 @@ extension MainController {
         
         view.addSubview(weekCollectionView)
         weekCollectionView.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(16)
+            make.left.right.equalToSuperview()
+            make.width.equalToSuperview()
             make.top.equalToSuperview().inset(646)
-            make.height.equalTo(240)
-            //make.bottom.equalToSuperview().inset(16)
+            make.bottom.equalToSuperview()
+            
         }
         
         view.addSubview(mainCardView)
         mainCardView.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(16)
+            make.left.right.equalToSuperview().inset(16)
             make.top.equalToSuperview().inset(116)
             make.height.equalTo(193)
         }
