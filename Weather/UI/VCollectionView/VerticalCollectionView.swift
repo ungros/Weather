@@ -11,7 +11,11 @@ class VerticalCollectionView: UICollectionView, UICollectionViewDelegate, UIColl
    
     let cells = 9
     let borderDistance: CGFloat = 16
+    let borderDistanccLeft: CGFloat = 16
+    let minimumSpacing: CGFloat = 12
     
+    let cellWidth = (UIScreen.main.bounds.width)
+   
     
     
     init() {
@@ -19,13 +23,12 @@ class VerticalCollectionView: UICollectionView, UICollectionViewDelegate, UIColl
         super.init(frame: .zero, collectionViewLayout: layout)
         
         layout.scrollDirection = .vertical
-        layout.minimumInteritemSpacing = 12
-        contentInset = UIEdgeInsets(top: 0, left: borderDistance, bottom: 0, right: borderDistance)
+        layout.minimumInteritemSpacing = minimumSpacing
+        contentInset = UIEdgeInsets(top: 0, left: borderDistanccLeft, bottom: 0, right: borderDistance)
         //bordering cells - contentInset
         
         
-        
-        backgroundColor = .green
+        backgroundColor = .clear
         showsVerticalScrollIndicator = false
        
         delegate = self
@@ -51,6 +54,6 @@ extension VerticalCollectionView {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 500, height: 72)
+        return CGSize(width: cellWidth - borderDistance - borderDistanccLeft, height: 72)
     }
 }

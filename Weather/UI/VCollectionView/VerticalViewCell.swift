@@ -65,6 +65,8 @@ class VerticalViewCell: UICollectionViewCell {
 
 extension VerticalViewCell {
     func setup() {
+        backgroundColor = UIColor(named: "VerticalViewCell")
+        layer.cornerRadius = 12
         
         addSubview(stackView)
         stackView.snp.makeConstraints { make in
